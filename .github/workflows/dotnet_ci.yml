@@ -26,5 +26,5 @@ jobs:
         SCA_SCAN_URL: https://cd-scanner.herokuapp.com/processAndSave
       run: |
         curl https://raw.githubusercontent.com/CloudDefenseAI/cd/master/latest/cd-latest-linux-x64.tar.gz > /tmp/cd-latest-linux-x64.tar.gz && tar -C /tmp -xzf /tmp/cd-latest-linux-x64.tar.gz && chmod +x /tmp/cdefense
-        /tmp/cdefense scan --verbose --lang=dotnet --go --project-name=vulnerable-dotnet-github-action --api-key=${{ secrets.CD_API_KEY }}
+        /tmp/cdefense scan --verbose --lang=dotnet --go --project-name=vulnerable-dotnet --api-key=${{ secrets.CD_API_KEY }}
         
